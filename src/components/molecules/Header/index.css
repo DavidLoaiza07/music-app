@@ -1,0 +1,32 @@
+
+.body__container__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.body__container__header__left {
+    display: flex;
+    align-items: center;
+    flex: 0.5;
+    min-width: 75px;
+    background-color: #fff;
+    color: #181818;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.body__container__header__left__input {
+    border: none;
+    width: 100%;
+}
+
+.body__container__header__right {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.body__container__header__right__user {
+    margin-left: 15px;
+}

@@ -1,0 +1,11 @@
+.body__container {
+    flex: 0.8;
+    background: linear-gradient(#34003473, #000);
+    color: #fff;
+    height: 100vh;
+    padding: 30px;
+    overflow-y: overlay;
+}
+
+
+/*Main  Body container*/

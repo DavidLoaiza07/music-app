@@ -1,0 +1,15 @@
+.middleBoddy__container__icons__playButton,
+.middleBoddy__container__icons__favButton,
+.middleBoddy__container__icons__moreButton {
+  margin: 20px 0 20px 20px;
+  font-size: xx-large;
+}
+
+.middleBoddy__container__icons__playButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.middleBody__container__songs {
+    margin-left: 20px;
+}

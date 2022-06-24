@@ -1,0 +1,12 @@
+.login__container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.login__container__logo {
+    width: 90%;
+    height: fit-content;
+}

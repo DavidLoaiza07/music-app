@@ -1,0 +1,11 @@
+.headerBody__container {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.headerBody__container__img {
+    width: 15vw;
+    margin: 0 20px;
+    box-shadow: 0 4px 6px #000;
+}

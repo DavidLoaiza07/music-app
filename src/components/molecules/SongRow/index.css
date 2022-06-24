@@ -1,0 +1,28 @@
+.songRow__container {
+  display: flex;
+  margin-left: 25px;
+  z-index: 90;
+  align-items: center;
+}
+
+.songRow__container:hover {
+  cursor: pointer;
+  background-color: #000;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.songRow__container__picture {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.songRow__container__songInfo {
+  margin-left: 20px;
+}
+
+.songRow__container__songInfo__moreInfo {
+  margin-top: 3px;
+  color: #d3d3d3;
+}
