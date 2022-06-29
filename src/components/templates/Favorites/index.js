@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import SpotifyWebApi from "spotify-web-api-js";
 import { selectToken, SET_TOKEN } from '../../../features/TokenSlice';
 import { selectUser, SET_USER } from '../../../features/UserSlice';
 import { getTokenFromURL } from '../../atoms/LoginButton';
-import FavoriteRow from '../../molecules/FavoriteRow';
+import FavoriteCompleteBody from '../../molecules/FavoriteCompleteBody';
 import Footer from '../../molecules/Footer';
-import SpotifyBody from '../../molecules/SpotifyBody';
 
 
 const spotify = new SpotifyWebApi();
@@ -30,8 +29,7 @@ const Favorites = () => {
   }, [dispatch]);
   return (
     <div>
-      {/* <SpotifyBody /> */}
-      <FavoriteRow />
+      <FavoriteCompleteBody />
       {/* <Footer /> */}
     </div>
   )

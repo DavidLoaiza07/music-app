@@ -1,0 +1,10 @@
+.addFavorite__container__button {
+    font-size: x-large;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+  
+  .addFavorite__container__button:hover {
+    transform: scale(1.2);
+  }

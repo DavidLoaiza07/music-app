@@ -7,6 +7,7 @@ import "./index.css";
 import LoginPage from "./components/pages/LoginPage/index";
 import Player from "./components/templates/Player";
 import Favorites from "./components/templates/Favorites";
+import MainPage from "./components/pages/MainPage";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,7 +17,8 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/mainPage" element={<Player />} /> 
+          <Route path="mainPage" element={<MainPage />} />
+          <Route path="/playlist" element={<Player />} /> 
           <Route path="/favorites"  element={<Favorites />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>

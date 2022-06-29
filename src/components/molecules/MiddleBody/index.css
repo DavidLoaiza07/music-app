@@ -1,14 +1,17 @@
-.middleBoddy__container__icons__playButton,
-.middleBoddy__container__icons__favButton,
-.middleBoddy__container__icons__moreButton {
-  margin: 20px 0 20px 20px;
-  font-size: xx-large;
+@media screen and (max-width:320px){
+  .middleBody__container__songs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .middleBody__container__songs {
+    margin-left: 10px;
+}    
 }
 
-.middleBoddy__container__icons__playButton:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
+
 
 .middleBody__container__songs {
     margin-left: 20px;

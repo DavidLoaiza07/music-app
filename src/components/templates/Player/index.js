@@ -35,16 +35,8 @@ const Player = () => {
 
   return (
     <>
-      {/* {token ? (
-        <>
       <SpotifyBody />
-      <Footer />  
-      </>    ) : (
-        <Navigate to="/login" replace /> 
-
-      )} */}
-      <SpotifyBody />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,3 +1,4 @@
+import AddFavorite from "../../atoms/AddFavorite";
 import "./index.css";
 
 const SongRow = ({ track }) => {
@@ -10,8 +11,9 @@ const SongRow = ({ track }) => {
         <h4>{track.name}</h4>
         <p className="songRow__container__songInfo__moreInfo">
           {track.artists.map((artist) => artist.name).join(", ")}
-          {track.album.name}
+          {/* {track.album.name} */}
         </p>
+        <AddFavorite />
       </section>
     </div>
   ); 

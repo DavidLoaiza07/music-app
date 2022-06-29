@@ -1,6 +1,7 @@
 import { FaSearch, FaUserCircle } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import {selectUser} from "../../../features/UserSlice/index";
+import LogoutButton from "../../atoms/LogOutButton";
 import "./index.css";
 
 const Header = () => {
@@ -8,7 +9,7 @@ const Header = () => {
   return (
     <header className="body__container__header">
       <section className="body__container__header__left">
-        <FaSearch title="Search" />
+        <FaSearch className="body__container__header__left__icon" title="Search" />
         <input
           className="body__container__header__left__input"
           type="text"
@@ -16,8 +17,9 @@ const Header = () => {
         />
       </section>
       <section className="body__container__header__right">
-        <FaUserCircle />
+        <FaUserCircle className="body__container__header__left__icon" />
         <h4 className="body__container__header__right__user">{user?.display_name}</h4>
+        <LogoutButton />
       </section>
     </header>
   );
