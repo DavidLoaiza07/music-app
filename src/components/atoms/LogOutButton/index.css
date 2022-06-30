@@ -1,20 +1,9 @@
 .logoutButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: small;
-    background-color: #b91d1db9;
-    border: 1px solid #000;
-    border-radius: 50px;
-    color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
+    color: grey;
+    height: 70px;
     cursor: pointer;
-    min-width: 80px;
-    min-height: 30px;
-    margin-left: 10px;
-}
-
-.logoutButton:hover {
-    background-color: red;
-}
+    transition: 300ms color ease-in;
+    margin-left: 17px;
+    font-size: x-large;
+  }

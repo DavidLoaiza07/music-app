@@ -1,27 +1,10 @@
-@media screen and (max-width: 320px){
-    .songRow__container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .songRow__container:hover {
-      cursor: pointer;
-      background-color: #000;
-      opacity: 0.8;
-      color: #fff;
-    }
-
-    .songRow__container__songInfo {
-      display: flex;
-      flex-direction: column;
-    }
-}
-
 .songRow__container {
   display: flex;
-  margin-left: 25px;
-  z-index: 90;
   align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  margin-left: 12px;
+  margin-right: 10px;
 }
 
 .songRow__container:hover {
@@ -31,18 +14,40 @@
   color: #fff;
 }
 
-.songRow__container__picture {
-  height: 80px;
-  width: 80px;
-  object-fit: contain;
-}
-
 .songRow__container__songInfo {
-  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  margin-left: 10px;
 }
 
-.songRow__container__songInfo__moreInfo {
-  margin-top: 3px;
-  color: #d3d3d3;
+.songRow__container__pictureContainer {
+  margin-left: 50px;
 }
 
+.songRow__container__picture {
+  width: 80px;
+  height: 80px;
+
+}
+
+@media screen and (min-width: 500px) {
+  .songRow__container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    margin-left: 10px;
+
+  }
+
+  .songRow__container__songInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-right: 280px; 
+  }
+
+  .songRow__container__addSong {
+    margin-right: 45px;    
+    }
+}

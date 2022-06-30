@@ -1,4 +1,3 @@
-import { RiHeart3Fill, RiMoreFill, RiPlayCircleFill } from "react-icons/ri";
 import FavoriteRow from "../FavoriteRow";
 
 const FavoriteMiddleBody = () => {

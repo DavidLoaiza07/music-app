@@ -29,7 +29,8 @@ const scopes = [
   "user-read-recently-played",
   "user-read-playback-state",
   "user-read-email",
-  "user-library-read"
+  "user-library-read",
+  "user-library-modify"
 ];
 
 const loginURL = `${endpoint}?client_id=${clientID}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes.join(

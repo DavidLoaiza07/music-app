@@ -1,10 +1,10 @@
-.addFavorite__container__button {
+.addFavoritecontainer__button {
     font-size: x-large;
     display: flex;
     justify-self: flex-end;
     align-self: flex-end;
   }
   
-  .addFavorite__container__button:hover {
+  .addFavoritecontainer__button:hover {
     transform: scale(1.2);
   }

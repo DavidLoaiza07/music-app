@@ -1,0 +1,17 @@
+.sidebar__container__menuButton {
+    /* position: fixed; */
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);  
+    border-radius: 30px;
+  }
+
+  @media screen and (max-width: 320px){
+    .sidebar__container__menuButton {
+        top: 20px;
+        left: 20px;
+      }    
+  }

@@ -26,7 +26,7 @@ const Favorites = () => {
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => dispatch(SET_USER(user)));
     }
-  }, [dispatch]);
+  }, []);
   return (
     <div>
       <FavoriteCompleteBody />

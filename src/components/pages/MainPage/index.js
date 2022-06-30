@@ -10,7 +10,6 @@ import SpotifyBody from "../../molecules/SpotifyBody/index";
 import "./index.css";
 
 const spotify = new SpotifyWebApi();
-console.log(spotify);
 
 const MainPage = () => {
   const token = useSelector(selectToken) || localStorage.getItem("token");
@@ -26,12 +25,11 @@ const MainPage = () => {
       dispatch(SET_TOKEN(_token));
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => dispatch(SET_USER(user)));
-      console.log(token);
       spotify
         .getPlaylist("2ThpgQyy0f6Ix1HZ8FYDN1")
         .then((playlist) => dispatch(SET_PLAYLIST(playlist)));
     }
-  }, [dispatch]);
+  }, []);
 
   return (
     <>

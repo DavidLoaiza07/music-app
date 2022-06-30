@@ -6,7 +6,7 @@ const HeaderBody = () => {
   const playlist = useSelector(selectPlaylist);
   return (
     <div className="headerBody__container">
-      <figure>
+      <figure className="headerBody__container__figure">
         <img
           className="headerBody__container__img"
           src={playlist?.images[0]?.url}
@@ -14,12 +14,12 @@ const HeaderBody = () => {
         />
       </figure>
       <section className="headerBody__container__playlistInfo">
-        <h4 className="headerBody__container__playlistInfo__title">Lista</h4>
-        <h1 className="headerBody__container__playlistInfo__name">
+        <h6 className="headerBody__container__playlistInfo__title">Lista</h6>
+        <h3 className="headerBody__container__playlistInfo__name">
           {playlist?.name}
-        </h1>
+        </h3>
       </section>
-    </div>
+    </div> 
   );
 };
 
