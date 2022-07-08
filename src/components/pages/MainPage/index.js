@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { Navigate } from "react-router-dom";
 import {
   COMPLETE_FAVORITE,
   requestFavorites,
@@ -24,10 +25,8 @@ const MainPage = () => {
       });
       dispatch(COMPLETE_FAVORITE({ favorites: temp }));
     });
-  }
- 
-  {
-    // if (!spotify.getAccessToken()) return <Navigate to="/login" replace />
+  } else {
+    // return <Navigate to="/login" replace /> 
   }
 
   return (

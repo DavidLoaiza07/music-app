@@ -1,12 +1,13 @@
 import React from "react";
 import Images from "../../../utils/Images";
-import { LoginButton } from "../../atoms/LoginButton/index";
+import { getTokenFromURL, LoginButton } from "../../atoms/LoginButton/index";
 import "./index.css";
 import { Navigate } from "react-router-dom";
 import Button from "../../atoms/Button";
 
 const LoginPage = () => {
-  const token = localStorage.getItem("token");
+  const hash = getTokenFromURL();
+    const token = localStorage.getItem('token') || hash.access_token;
 
   {
     if (token) return <Navigate to="/mainPage" replace /> 
@@ -21,5 +22,5 @@ const LoginPage = () => {
     </div>
   );
 };
-
+ 
 export default LoginPage;

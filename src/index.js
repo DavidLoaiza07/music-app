@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import store from "./app/store/index";
@@ -8,9 +8,7 @@ import LoginPage from "./components/pages/LoginPage/index";
 import Player from "./components/templates/Player";
 import Favorites from "./components/templates/Favorites";
 import MainPage from "./components/pages/MainPage";
-import { spotify } from "./services/SpotifyApi";
-
-const token = spotify.getAccessToken();
+import PrivateRoute from "./services/PrivateRoute";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,16 +16,28 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/mainPage" element={<MainPage />} />
-          <Route
-            path="/mainPage#"
-            element={<Navigate to="/mainPage" replace />}
-          />
-          <Route path="/playlist" element={<Player />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
-          <Route path="*" element={<Navigate to="/mainPage" replace />} />
-          <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/mainPage" element={<PrivateRoute Component={MainPage} />} /> 
+        <Route path="/favorites" element={<PrivateRoute Component={Favorites} />} /> 
+        <Route path="/playlist" element={<PrivateRoute Component={Player} />} /> 
+
+ 
+
+
+
+        {/* <Route path="/login" element={<LoginPage />} />
+        <Route exact path='/' element={<PrivateRoute/>}>
+            <Route exact path='/mainPage' element={<MainPage/>}/>
+        </Route>
+        <Route exact path='/' element={<PrivateRoute/>}>
+            <Route exact path='/playlist' element={<Player/>}/>
+        </Route>
+          <Route exact path='/' element={<PrivateRoute/>}>
+            <Route exact path='/favorites' element={<Favorites/>}/>
+        </Route>
+        <Route exact path='/' element={<PrivateRoute/>}>
+            <Route exact path='*' element={<MainPage/>}/>
+        </Route> */}
         </Routes>
       </BrowserRouter>
     </Provider>
