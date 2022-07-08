@@ -6,6 +6,8 @@ import { selectUser, SET_USER } from '../../../features/UserSlice';
 import { getTokenFromURL } from '../../atoms/LoginButton';
 import FavoriteCompleteBody from '../../molecules/FavoriteCompleteBody';
 import Footer from '../../molecules/Footer';
+import { Navigate } from "react-router-dom";
+
 
 
 const spotify = new SpotifyWebApi();
@@ -14,6 +16,8 @@ const Favorites = () => {
   const token = useSelector(selectToken) || localStorage.getItem("token");
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+
+
 
   useEffect(() => {
     const hash = getTokenFromURL();
@@ -25,8 +29,9 @@ const Favorites = () => {
       dispatch(SET_TOKEN(_token));
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => dispatch(SET_USER(user)));
-    }
+    } 
   }, []);
+
   return (
     <div>
       <FavoriteCompleteBody />

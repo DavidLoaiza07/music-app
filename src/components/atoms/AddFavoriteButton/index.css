@@ -8,3 +8,8 @@
   .addFavoritecontainer__button:hover {
     transform: scale(1.2);
   }
+
+  .addFavoritecontainer.highlight {
+    opacity: 1;
+    color: #00ff00;
+  }

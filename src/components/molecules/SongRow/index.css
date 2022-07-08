@@ -1,10 +1,11 @@
 .songRow__container {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding-top: 20px;
   margin-left: 12px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
+  justify-content: space-between;
+  width: 100%;
 }
 
 .songRow__container:hover {
@@ -28,10 +29,35 @@
 .songRow__container__picture {
   width: 80px;
   height: 80px;
-
 }
 
+.songRow__container__addSong {
+  margin-right: 15px;    
+  }
+
 @media screen and (min-width: 500px) {
+  .songRow__container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    margin-left: 10px;
+
+  }
+ 
+  .songRow__container__songInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-right: 280px; 
+  }
+
+  .songRow__container__addSong {
+    margin-right: 45px;    
+    }
+}
+
+
+@media screen and (min-width: 700px) {
   .songRow__container {
     display: flex;
     justify-content: space-between;

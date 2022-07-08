@@ -8,7 +8,9 @@ import LoginPage from "./components/pages/LoginPage/index";
 import Player from "./components/templates/Player";
 import Favorites from "./components/templates/Favorites";
 import MainPage from "./components/pages/MainPage";
+import { spotify } from "./services/SpotifyApi";
 
+const token = spotify.getAccessToken();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,11 +18,16 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="mainPage" element={<MainPage />} />
-          <Route path="/playlist" element={<Player />} /> 
-          <Route path="/favorites"  element={<Favorites />} />
+          <Route path="/mainPage" element={<MainPage />} />
+          <Route
+            path="/mainPage#"
+            element={<Navigate to="/mainPage" replace />}
+          />
+          <Route path="/playlist" element={<Player />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/mainPage" replace />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>
     </Provider>

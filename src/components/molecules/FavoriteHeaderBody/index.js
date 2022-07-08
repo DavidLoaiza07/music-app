@@ -9,16 +9,13 @@ const FavoriteHeaderBody = () => {
     <div className="headerBody__container">
       <figure>
         <img
-          className="headerBody__container__img"
+          className="favoriteHeaderBody__container__img"
           src={Images.img2}
           alt="Favoritos"
         />
       </figure>
       <section className="headerBody__container__playlistInfo">
-        <h4 className="headerBody__container__playlistInfo__title">Favoritos</h4>
-        <h1 className="headerBody__container__playlistInfo__name">
-          {playlist?.name}
-        </h1>
+        <h2 className="headerBody__container__playlistInfo__title">Favoritos</h2>
       </section>
     </div>
   );

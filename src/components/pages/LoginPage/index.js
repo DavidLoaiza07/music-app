@@ -9,7 +9,7 @@ const LoginPage = () => {
   const token = localStorage.getItem("token");
 
   {
-    if (token) return <Navigate to="/mainPage" replace />;
+    if (token) return <Navigate to="/mainPage" replace /> 
   }
   return (
     <div className="login__container">

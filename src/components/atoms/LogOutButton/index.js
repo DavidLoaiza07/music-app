@@ -16,7 +16,7 @@ const LogoutButton = () => {
       <RiLogoutBoxLine
         onClick={removeToken}
         type="button"
-        className="logoutButton"
+        className="sidebarButton"
       />
     
   );

@@ -43,6 +43,7 @@
 
   .body__container__header__left__icon {
     font-size: large;
+    padding-right: 15px;
   }
 
   .body__container__header__left__input {

@@ -27,7 +27,7 @@ const Header = () => {
           {user?.display_name}
         </h4>
       </section> 
-    </header>
+    </header> 
   );
 };
 

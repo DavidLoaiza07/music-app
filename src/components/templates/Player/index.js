@@ -8,6 +8,7 @@ import { selectUser, SET_USER } from "../../../features/UserSlice";
 import Footer from "../../molecules/Footer/index";
 import SpotifyBody from "../../molecules/SpotifyBody/index";
 import "./index.css";
+import {Navigate} from "react-router-dom";
 
 const spotify = new SpotifyWebApi();
 

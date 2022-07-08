@@ -4,6 +4,12 @@
     height: 70px;
     cursor: pointer;
     transition: 300ms color ease-in;
-    margin-left: 17px;
     font-size: x-large;
+    background: none;
+    border: none;
+  }
+
+  .sidebarButton.highlight {
+    opacity: 1;
+    color: #fff;
   }
